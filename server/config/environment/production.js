@@ -19,6 +19,6 @@ module.exports = {
           process.env.MONGOHQ_URL ||
           process.env.OPENSHIFT_MONGODB_DB_URL +
           process.env.OPENSHIFT_APP_NAME ||
-          'mongodb://localhost/capproject'
+          'mongodb://heroku_ffj3n01b:bn21vecqnp78k78ru1f4n5qjg2@ds047315.mongolab.com:47315/heroku_ffj3n01b'
   }
 };
