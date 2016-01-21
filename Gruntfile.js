@@ -2,6 +2,7 @@
 'use strict';
 
 module.exports = function (grunt) {
+    
   var localConfig;
   try {
     localConfig = require('./server/config/local.env');
