@@ -10,8 +10,13 @@ mongoose.Promise = require('bluebird');
 import config from './config/environment';
 import http from 'http';
 
+var uristring =
+    process.env.MONGOLAB_URI ||
+    process.env.MONGOHQ_URL ||
+    'mongodb://localhost/HelloMongoose';
 // Connect to MongoDB
-mongoose.connect(config.mongo.uri, config.mongo.options);
+//Previous: mongoose.connect(config.mongo.uri, config.mongo.options);
+mongoose.connect(uristring, config.mongo.options);
 mongoose.connection.on('error', function(err) {
   console.error('MongoDB connection error: ' + err);
   process.exit(-1);
